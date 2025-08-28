@@ -14,6 +14,18 @@
     gap: 40px;
     white-space: nowrap;
   }
+  a {
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    transition: all 0.3s ease;
+     &:hover {
+      background: rgba(0, 0, 0, 0.05);
+      color: #fead04;
+    }
+  }
   .nav {
     .top-summary {
       display: flex;
