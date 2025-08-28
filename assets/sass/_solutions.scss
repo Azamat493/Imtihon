@@ -21,7 +21,7 @@
   }
 }
 
-.grid {
+.grid-solutions {
   background: $grey;
   padding: 20px;
   text-align: left;
@@ -65,7 +65,7 @@
   max-width: 566px;
   height: 252px;
 }
-.grid {
+.grid-solutions {
   h1 {
     font-family: var(--font-family);
     font-weight: 700;
@@ -112,12 +112,12 @@
   max-width: 223px;
 }
 @media (max-width: 1200px) {
-  .grid {
+  .grid-solutions {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 768px) {
-  .grid {
+  .grid-solutions {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
@@ -137,7 +137,7 @@
   }
 }
 @media (max-width: 480px) {
-  .grid {
+  .grid-solutions {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
@@ -185,7 +185,7 @@
   }
 }
 @media (max-width: 320px) {
-  .grid {
+  .grid-solutions {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
   }

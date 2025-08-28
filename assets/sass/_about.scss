@@ -1,0 +1,160 @@
+@use "./variable" as *;
+
+.about .container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.about-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.text {
+  width: 40%;
+  p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 155%;
+    color: #000;
+    text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+  h2 {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 138%;
+    text-transform: uppercase;
+    color: #000;
+  }
+  span {
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 138%;
+    text-transform: uppercase;
+    color: #000;
+  }
+  button {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 239px;
+    height: 50px;
+    background-color: $primary;
+    border: none;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 138%;
+    color: #fff;
+    &:hover {
+      background-color: darken($primary, 10%);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+  }
+}
+.img {
+  width: 50%;
+}
+.media-img {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .text {
+    width: 50%;
+  }
+
+  .img {
+    width: 45%;
+  }
+}
+@media (max-width: 768px) {
+  .text {
+    width: 100%;
+    p {
+      max-height: none; 
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .img {
+    display: none;
+  }
+
+  .media-img {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .text p {
+    max-height: 4.5em;
+    overflow-y: auto;
+    padding-right: 5px;
+  }
+
+  .text p::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .text p::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+  }
+
+  .text p::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .text h2 {
+    font-size: 36px;
+  }
+
+  .text p {
+    font-size: 14px;
+  }
+
+  button {
+    max-width: 100%;
+  }
+}
+@media (max-width: 300px) {
+  .text {
+    width: 100%;
+  }
+
+  .text h2 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .text p {
+    font-size: 12px;
+    max-height: 4em;
+    overflow-y: auto;
+    padding-right: 5px;
+  }
+
+  .text p::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .text p::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+  }
+
+  .text p::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  button {
+    max-width: 100%;
+    font-size: 14px;
+    height: 45px;
+  }
+}
