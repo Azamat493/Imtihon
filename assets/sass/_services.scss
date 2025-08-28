@@ -1,0 +1,183 @@
+@use "./variable" as *;
+
+.services {
+  margin-top: 40px;
+  padding: 20px;
+  h2 {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 138%;
+    text-transform: uppercase;
+    color: #000;
+  }
+  span {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 138%;
+    text-transform: uppercase;
+    color: #000;
+  }
+}
+
+.grid-services {
+  background: $grey;
+  padding: 20px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.uslugi1 {
+  background-image: url(../../images/uslugi1.svg);
+  width: 100%;
+  max-width: 566px;
+  height: 156px;
+}
+.uslugi2 {
+  background-image: url(../../images/uslugi2.svg);
+  width: 100%;
+  max-width: 566px;
+  height: 156px;
+}
+.uslugi3 {
+  background-image: url(../../images/uslugi3.svg);
+  width: 100%;
+  max-width: 566px;
+  height: 156px;
+}
+.uslugi4 {
+  background-image: url(../../images/uslugi4.svg);
+  width: 100%;
+  max-width: 566px;
+  height: 156px;
+}
+.uslugi5 {
+  background-image: url(../../images/uslugi5.svg);
+  width: 100%;
+  max-width: 566px;
+  height: 156px;
+}
+.uslugi6 {
+  background-image: url(../../images/uslugi6.svg);
+  width: 100%;
+  max-width: 566px;
+  height: 156px;
+}
+.white {
+  box-shadow: 0 7px 40px 0 rgba(0, 0, 0, 0.03);
+  background: #fff;
+  width: 289px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  h1 {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 138%;
+    text-align: center;
+    color: #000;
+  }
+}
+.white3 {
+  box-shadow: 0 7px 40px 0 rgba(0, 0, 0, 0.03);
+  background: #fff;
+  width: 600px;
+  height: 59px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 10px;
+  max-width: 90%;
+  h1 {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 138%;
+    text-align: center;
+    color: #000;
+  }
+}
+.uslugi1,
+.uslugi2,
+.uslugi3,
+.uslugi4,
+.uslugi5,
+.uslugi6 {
+  position: relative;
+}
+@media (max-width: 1400px) {
+  .white3 {
+    h1 {
+      font-size: 16px;
+    }
+  }
+}
+@media (max-width: 1201px) {
+  .white3 {
+    h1 {
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .grid-services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .grid-services {
+    grid-template-columns: 1fr;
+  }
+  .services {
+    h2 {
+      font-size: 40px;
+    }
+    span {
+      font-size: 40px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .services {
+    h2 {
+      font-size: 35px;
+    }
+    span {
+      font-size: 35px;
+    }
+  }
+}
+@media (min-width: 320px) {
+  .carousel {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .grid-services {
+    display: none;
+  }
+  .carousel {
+    display: block;
+  }
+  .services {
+    h2 {
+      font-size: 30px;
+    }
+    span {
+      font-size: 30px;
+    }
+  }
+}
