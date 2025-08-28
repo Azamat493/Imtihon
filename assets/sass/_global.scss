@@ -1,0 +1,41 @@
+@use "./variable" as *;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "Roboto", sans-serif;
+  --third-family: "Fugaz One", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 95%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+button,
+i {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+body {
+    background: #fff;
+}

@@ -1,0 +1,342 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "Roboto", sans-serif;
+  --third-family: "Fugaz One", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 95%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+button,
+i {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+body {
+  background: #fff;
+}
+
+.header {
+  background: #fff;
+}
+.header .container {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 40px;
+  white-space: nowrap;
+}
+.header .nav .top-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.header .nav .bottom-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+}
+.header .header-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.header .header-left select {
+  box-shadow: 0 7px 50px 0 rgba(0, 0, 0, 0.15);
+  background: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-family: var(--font-family);
+  font-size: 14px;
+  cursor: pointer;
+}
+.header .header-left .contact h1 {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 16px;
+  color: #000;
+}
+.header .header-left .contact .number {
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 16px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+.header .header-left .contact .number h1 {
+  cursor: pointer;
+}
+.header .header-left .contact .number details h1:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #fead04;
+}
+
+details summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  padding-right: 20px;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::after {
+  content: "";
+  background: url("../../images/Summary.svg") no-repeat center center;
+  background-size: 12px 12px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  width: 12px;
+  height: 12px;
+  transition: transform 0.3s ease;
+}
+
+details ul {
+  margin: 10px 0 0 15px;
+  padding: 0;
+  list-style: disc;
+  font-size: 14px;
+  font-family: var(--font-family);
+  color: #333;
+}
+
+details ul li {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+details ul li:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #fead04;
+}
+
+.burger {
+  display: none;
+  font-size: 26px;
+  color: #000;
+  cursor: pointer;
+  z-index: 200;
+}
+
+#checked {
+  display: none;
+}
+
+label[for=checked] {
+  display: none;
+  font-size: 26px;
+  color: #000;
+  cursor: pointer;
+}
+
+#checked:checked ~ .nav {
+  display: flex;
+}
+
+.nav .close {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #000;
+  z-index: 200;
+}
+
+.header-left .contact {
+  display: block;
+}
+
+.nav .mobile-contact {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+}
+
+.nav .mobile-contact h1 {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+.nav .mobile-contact .number {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav .mobile-contact .number h1 {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.nav .mobile-contact .number details summary {
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 16px;
+  color: #fff;
+}
+
+.nav .mobile-contact .number details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 1500px) {
+  .header .nav {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .header .nav .top-summary,
+  .header .nav .bottom-summary {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .mobile-contact {
+    display: none;
+  }
+  .mobile-contact details {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  label[for=checked] {
+    display: block;
+    cursor: pointer;
+    font-size: 28px;
+    z-index: 200;
+  }
+  .header-left .contact {
+    display: none;
+  }
+  .header .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 40px 30px;
+    background: #fead04;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 320px;
+    transition: left 0.3s ease-in-out;
+    z-index: 150;
+  }
+  #checked:checked ~ .burger {
+    display: none;
+  }
+  #checked:checked ~ .nav {
+    left: 0;
+  }
+  .header .nav .top-summary,
+  .header .nav .bottom-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+  }
+  #checked:checked ~ .nav .close {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .header .nav {
+    width: 260px;
+    padding: 30px 20px;
+  }
+  label[for=checked] {
+    font-size: 26px;
+  }
+  .header .nav .top-summary,
+  .header .nav .bottom-summary {
+    gap: 12px;
+  }
+}
+@media (max-width: 500px) {
+  .header .container {
+    padding: 10px 15px;
+    gap: 20px;
+  }
+  .header-left {
+    gap: 10px;
+  }
+  .header-left select {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  .contact h1 {
+    font-size: 14px;
+  }
+  .contact .number h1 {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
